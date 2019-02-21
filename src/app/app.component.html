@@ -26,8 +26,8 @@
       <p>Secret password = tuna</p>
     </div>
   </div>
-  <div class="row" *ngFor="let detail of details">
-    <div class="col-xs-12" [ngStyle]="{backgroundColor: detail.count > 4 ? 'blue' : ''}" [ngClass]="{clickLog: detail.count > 4}">
+  <div class="row" *ngFor="let detail of details; let i = index;">
+    <div class="col-xs-12" [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : ''}" [ngClass]="{clickLog: i >= 4}">
       <p>Click happed on: {{ detail.date }} Click counter: {{ detail.count }}</p>
     </div>
   </div>
