@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-assignment-three';
+  displayDetails = false;
+  details = [];
+
+  onClickDisplay() {
+    this.displayDetails = !this.displayDetails;
+    this.details.push({ date: new Date(), count: this.details.length + 1 });
+  }
 }
